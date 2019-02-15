@@ -1,0 +1,8 @@
+
+
+    <li><%= @product.id%></li>
+    <li><%= @product.name%></li>
+    <br>
+    <br>
+    <%= link_to  "Edit", edit_product_path %>
+    <%= link_to  "Delete", product_path(@product) ,method: :delete ,data: { confirm: 'Are you sure? '} %>

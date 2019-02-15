@@ -1,0 +1,15 @@
+<h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p>
+
+<%= @product.name %>
+
+<% @product.each do |x| %>
+
+    <li><%= x.id %></li>
+    <li><%= link_to  x.name, x %></li>
+    <li><%= truncate(x.description,length: 5) %> <li>
+    <li><%= x.price %> <li>
+    <li><%= x.imported_on %> <li>
+    <br>
+    <br>
+<% end %>
